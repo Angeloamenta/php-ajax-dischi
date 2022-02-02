@@ -16,7 +16,14 @@
     <main id="app">
         <div class="container">
             <div class="albums">
-                <h1>{{message}}</h1>
+                <div class="album" v-for="album in albums">
+                    <div class="album-cover">
+                        <img :src="album.poster" alt="">   
+                    </div>
+                    <h3>{{album.title}}</h3>
+                    <p> {{album.author}}</p>
+                    <p>{{album.year}}</p>
+                </div>
             </div>
         </div>
     </main>
